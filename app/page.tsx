@@ -26,11 +26,10 @@ import Footer from '../components/Footer'
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-black text-white flex flex-col items-center justify-center">
-      <h1 className="text-4xl font-bold mb-4 text-cyan-400">Quiz3</h1>
+    <main className="min-h-screen bg-black font-space-grotesk text-white flex flex-col items-center justify-center">
+      <h1 className="text-4xl font-bold mb-4 text-cyan-400">Cysic Quiz</h1>
       <p className="text-lg mb-8 text-gray-300 text-center max-w-md">
-        Learn smarter, Retain better. with instant-recall quizzes.
-      </p>
+Read quick summaries about Cysic, quiz yourself instantly to lock in the knowledge.      </p>
       <Link href="/quiz">
         <button className="bg-cyan-500 hover:bg-cyan-600 text-white px-6 py-3 rounded-lg text-lg transition">
           Start Quiz

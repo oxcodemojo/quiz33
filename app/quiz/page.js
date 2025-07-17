@@ -96,10 +96,10 @@ export default function QuizPage() {
   return (
     <main className="min-h-screen font-space-grotesk bg-black text-white flex flex-col items-center justify-center p-6">
       
-      <h1 className="text-3xl font-bold mb-6 text-cyan-400">CYSIC QUIZ</h1>
-      <p className="text-lg text-center mb-8 text-cyan-300">
+      {/* <h1 className="text-3xl font-bold mb-6 text-cyan-400">CYSIC QUIZ</h1> */}
+      {/* <p className="text-lg text-center mb-8 text-cyan-300">
   Read quick summaries about Cysic, quiz yourself instantly to lock in the knowledge.
-</p>
+</p> */}
       {/* question card section  */}
 
       <div className="relative bg-gray-900 rounded-4xl p-6 w-full max-w-md shadow-lg mb-6">
@@ -133,7 +133,7 @@ export default function QuizPage() {
     onClick={prevQuestion}
     className="bg-cyan-700 hover:bg-gray-600 px-2 py-1 rounded text-sm"
   >
-    Previous Question
+    {'<< '}Prev
   </button>
 
   <button
@@ -148,7 +148,7 @@ export default function QuizPage() {
     onClick={nextQuestion}
     className="bg-cyan-700 hover:bg-gray-600 px-2 py-1 rounded text-sm"
   >
-    Next Question
+    Next {' >>'}
   </button>
 </div>
 
