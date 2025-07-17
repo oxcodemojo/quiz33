@@ -94,16 +94,12 @@ export default function QuizPage() {
   };
 
   return (
-    <main className="min-h-screen bg-black text-white flex flex-col items-center justify-center p-6">
+    <main className="min-h-screen font-space-grotesk bg-black text-white flex flex-col items-center justify-center p-6">
       
-      <h1 className="text-3xl font-bold mb-6 text-cyan-400">Quiz3</h1>
-        <div className="bg-gray-800 rounded-4xl p-4 mb-6 w-full max-w-md text-center">
-        <h5 className="text-lg font-semibold mb-2">🏆 SCORE</h5>
-        {/* <p>Total Attempts: {scoreData.total}</p> */}
-        <p>Correct Answers: {scoreData.correct}</p>
-        {/* <p>Accuracy: {scoreData.total > 0 ? ((scoreData.correct / scoreData.total) * 100).toFixed(1) : 0}%</p> */}
-      </div>
-
+      <h1 className="text-3xl font-bold mb-6 text-cyan-400">CYSIC QUIZ</h1>
+      <p className="text-lg text-center mb-8 text-cyan-300">
+  Read quick summaries about Cysic, quiz yourself instantly to lock in the knowledge.
+</p>
       {/* question card section  */}
 
       <div className="relative bg-gray-900 rounded-4xl p-6 w-full max-w-md shadow-lg mb-6">
@@ -113,8 +109,8 @@ export default function QuizPage() {
   Question {currentIndex + 1} of {allQuestions.length}
 </div>
 
-<h2 className="text-xl font-bold mb-3 text-center">{quizData.summary}</h2>
-<p className="text-lg mb-4 text-center">{quizData.question}</p>
+<h2 className="text-xl text-justify mb-3 text-center">{quizData.summary}</h2>
+<p className="text-l mb-5 text-center font-bold text-cyan-400 uppercase">{quizData.question}</p>
 
 
   <div className="space-y-2">
@@ -131,18 +127,39 @@ export default function QuizPage() {
     ))}
   </div>
 
+  
+    <div className="flex justify-center space-x-4 mt-6">
+  <button
+    onClick={prevQuestion}
+    className="bg-cyan-700 hover:bg-gray-600 px-2 py-1 rounded text-sm"
+  >
+    Previous Question
+  </button>
+
+  <button
+    onClick={checkAnswer}
+    disabled={selectedOption === null}
+    className="bg-yellow-500 hover:bg-yellow-600 px-3 py-1 rounded text-sm font-semibold"
+  >
+    Check Answer
+  </button>
+
+  <button
+    onClick={nextQuestion}
+    className="bg-cyan-700 hover:bg-gray-600 px-2 py-1 rounded text-sm"
+  >
+    Next Question
+  </button>
 </div>
+
+
+</div> 
+{/* // end */}
 
 {/* // check answer button and explanation section */}
 
 
-      <button
-        onClick={checkAnswer}
-        disabled={selectedOption === null}
-        className="bg-cyan-500 hover:bg-cyan-600 px-6 py-2 rounded text-lg"
-      >
-        Check Answer
-      </button>
+     
 
       {showExplanation && (
         <div className="mt-6 bg-gray-900 p-4 rounded p-4 mb-4 w-full max-w-md">
@@ -158,20 +175,6 @@ export default function QuizPage() {
 
      
 
-          <div className="flex space-x-4 mt-6">
-      <button
-        onClick= {prevQuestion}
-        className="bg-cyan-700 hover:bg-gray-600 px-4 py-2 rounded"
-      >
-       Previous Question
-      </button>
-      <button
-        onClick= {nextQuestion}
-        className="bg-cyan-700 hover:bg-gray-600 px-4 py-2 rounded"
-      >
-        Next Question
-      </button>
-    </div>
     </main>
   );
 }
