@@ -21,22 +21,23 @@
 "use client";
 
 import Link from 'next/link'
+import './globals.css'
+import Footer from '../components/Footer'
 
 export default function Home() {
   return (
     <main className="min-h-screen bg-black text-white flex flex-col items-center justify-center">
       <h1 className="text-4xl font-bold mb-4 text-cyan-400">Quiz3</h1>
       <p className="text-lg mb-8 text-gray-300 text-center max-w-md">
-        Learn smarter, Retain better. Practice Web3 and AI concepts with instant-recall quizzes.
+        Learn smarter, Retain better. with instant-recall quizzes.
       </p>
       <Link href="/quiz">
         <button className="bg-cyan-500 hover:bg-cyan-600 text-white px-6 py-3 rounded-lg text-lg transition">
           Start Quiz
         </button>
       </Link>
-      <footer className="mt-20 text-sm text-gray-600">
-        © {new Date().getFullYear()} Quiz3. All rights reserved.
-      </footer>
+     
+     <Footer />
     </main>
   )
 }
